@@ -9,7 +9,7 @@ import {
 } from '@material-ui';
 
 const Main = () => {
-  
+
   const useStyles = makeStyles(theme => ({
     root: {
       padding: '20px 10px',
@@ -17,9 +17,9 @@ const Main = () => {
       width: '100%'
     }
   }))
-  
+
   const classes = useStyles();
-  
+
   return (
     <Grid className={classes.root} spacing="2" justify="center" alignItems="center" container component="main">
       <Grid item sm="7" xs="12" component="section"><Balance /></Grid>

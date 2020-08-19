@@ -25,24 +25,24 @@ const IncomeExpenses = () => {
   }));
 
   const classes = useStyles();
-  
+
   const { addTransaction, transactions } = useContext(GlobalContext);
   const [text, setText] = useState('');
   const [amount, setAmount] = useState();
-  
+
   const createTransaction = (e) => {
     e.preventDefault();
-    
+
     const newTransaction = {
       id: Math.floor(Math.random() * 1000000),
       text,
       amount: +amount
     }
-    
+
     addTransaction(newTransaction);
     e.target.reset();
   }
-  
+
   useEffect(() => {
     localStorage.setItem('transactionList', JSON.stringify(transactions));
   }, [transactions])
